@@ -1,5 +1,8 @@
 // ARRAY FOR PROBLEMS 1 AND 2
 let array = [22, 14, 3, 4, 37, 6, 7, 81, 9, 10];
+
+
+
 // URL FOR DATA FETCH AND FETCH ITSELF
 const url = "http://bpbuild.com/devtest/data.php";
 
@@ -7,8 +10,26 @@ fetch(url)
   .then(res => res.json())
   .then(data => {
     console.log(data);
+    document.querySelectorAll(".grid-item")[4].innerHTML = data[0].firstname
+    document.querySelectorAll(".grid-item")[8].innerHTML = data[1].firstname
+    document.querySelectorAll(".grid-item")[12].innerHTML = data[2].firstname
+    document.querySelectorAll(".grid-item")[16].innerHTML = data[3].firstname
+    document.querySelectorAll(".grid-item")[5].innerHTML = data[0].lastname
+    document.querySelectorAll(".grid-item")[9].innerHTML = data[1].lastname
+    document.querySelectorAll(".grid-item")[13].innerHTML = data[2].lastname
+    document.querySelectorAll(".grid-item")[17].innerHTML = data[3].lastname
+    document.querySelectorAll(".grid-item")[6].innerHTML = data[0].email
+    document.querySelectorAll(".grid-item")[10].innerHTML = data[1].email
+    document.querySelectorAll(".grid-item")[14].innerHTML = data[2].email
+    document.querySelectorAll(".grid-item")[18].innerHTML = data[3].email
+    document.querySelectorAll(".grid-item")[7].innerHTML = data[0].gender
+    document.querySelectorAll(".grid-item")[11].innerHTML = data[1].gender
+    document.querySelectorAll(".grid-item")[15].innerHTML = data[2].gender
+    document.querySelectorAll(".grid-item")[19].innerHTML = data[3].gender
   });
-// RANDOMIZE FUNCTION
+
+
+  // RANDOMIZE FUNCTION
 function randomize(newArray) {
   var chgArray = newArray.length,
     temp,
@@ -20,7 +41,6 @@ function randomize(newArray) {
     newArray[chgArray] = newArray[index];
     newArray[index] = temp;
   }
-  console.log(newArray);
   document.querySelector(".randomized").innerHTML = "Randomized: " + newArray;
 }
 randomize(array);
@@ -41,16 +61,21 @@ document
     console.log(newArray);
     document.querySelector(".randomized").innerHTML = "Randomized: " + newArray;
   });
-// AVERAGE FUNCTION
+
+
+
+  // AVERAGE FUNCTION
 function ArrayAverage() {
   var sum = array.reduce(function(a, b) {
     return a + b;
   });
   Avg = sum / array.length;
-  console.log(Avg);
   document.querySelector(".mean").innerHTML = "Mean: " + Avg;
 }
 ArrayAverage();
+
+
+
 // CODE FOR SMILEY FACE CHALLENGE
 let stmt =
   "Use the shortest possible regular expression or replacement method using php, ruby or javascript to put a smiley face after every word that ends in a vowel in this sentence.";
