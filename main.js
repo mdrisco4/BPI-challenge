@@ -1,5 +1,6 @@
+// ARRAY FOR PROBLEMS 1 AND 2
 let array = [22, 14, 3, 4, 37, 6, 7, 81, 9, 10];
-
+// URL FOR DATA FETCH AND FETCH ITSELF
 const url = "http://bpbuild.com/devtest/data.php";
 
 fetch(url)
@@ -7,7 +8,7 @@ fetch(url)
   .then(data => {
     console.log(data);
   });
-
+// RANDOMIZE FUNCTION
 function randomize(newArray) {
   var chgArray = newArray.length,
     temp,
@@ -40,7 +41,7 @@ document
     console.log(newArray);
     document.querySelector(".randomized").innerHTML = "Randomized: " + newArray;
   });
-
+// AVERAGE FUNCTION
 function ArrayAverage() {
   var sum = array.reduce(function(a, b) {
     return a + b;
@@ -50,30 +51,21 @@ function ArrayAverage() {
   document.querySelector(".mean").innerHTML = "Mean: " + Avg;
 }
 ArrayAverage();
-
+// CODE FOR SMILEY FACE CHALLENGE
 let stmt =
   "Use the shortest possible regular expression or replacement method using php, ruby or javascript to put a smiley face after every word that ends in a vowel in this sentence.";
 let words = stmt.split(" ");
-console.log(words);
-console.log(words[5].length);
-console.log(words[5].charAt(words[5].length - 1));
-console.log(words[words.length - 1].charAt(words[words.length - 1].length - 2));
-
-let newWords = []
+let newWords = [];
 for (let i = 0; i < words.length; i++) {
   if (
     words[i].charAt(words[i].length - 1) === "a" ||
     words[i].charAt(words[i].length - 1) === "e"
   ) {
-      wordSmiley = words[i] + "&#128512;"
-    // console.log(words[i] + "&#128512;");
-    // console.log(wordSmiley)
-    newWords.push(wordSmiley)
+    wordSmiley = words[i] + "&#128512;";
+    newWords.push(wordSmiley);
   } else {
-    // console.log(words[i]);
-    newWords.push(words[i])
+    newWords.push(words[i]);
   }
 }
-console.log(newWords)
-newSentence = newWords.join(' ')
-document.querySelector(".smileys").innerHTML = newSentence
+newSentence = newWords.join(" ");
+document.querySelector(".smileys").innerHTML = newSentence;
