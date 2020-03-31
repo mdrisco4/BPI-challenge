@@ -8,11 +8,20 @@ const url = "http://bpbuild.com/devtest/data.php"
         console.log(data);
           });
 
-// for (let i = 0; i < array.length; i++) {
-//     let start = 0
-//     start = start += array[i]
-//     console.log(start)
-// }
+function randomize(newArray) {
+    var chgArray = newArray.length, temp, index;
+    while (chgArray > 0) {
+        index = Math.floor(Math.random() * chgArray);
+        chgArray--;
+        temp = newArray[chgArray];
+        newArray[chgArray] = newArray[index];
+        newArray[index] = temp;
+    }
+    console.log(newArray)
+    // document.querySelector(".randomized").innerHTML = 'Randomized: ' newArray
+}
+
+randomize(array)
 
 
 function ArrayAverage() {
