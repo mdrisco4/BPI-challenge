@@ -18,9 +18,10 @@ const url = "http://bpbuild.com/devtest/data.php"
 function ArrayAverage() {
     var sum = array.reduce(function(a, b) {
         return a + b;
-    }, 0) 
+    })
     Avg = sum/array.length
     console.log(Avg)
+    document.querySelector(".mean").innerHTML = 'Mean: ' + Avg
 }
 
 ArrayAverage()
