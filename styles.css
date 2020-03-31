@@ -1,11 +1,12 @@
 .box-outline {
     border: 1px solid black;
     width: 400px;
-    height: 210px;
+    height: 212px;
 }
 
 .grid-container {
     display: grid;
+    padding: 2px 0 0 2px;
     grid-template-columns: 90px 90px 150px 60px;
     grid-template-rows: 40px 40px 40px 40px 40px;
     grid-column-gap: 2px;

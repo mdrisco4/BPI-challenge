@@ -7,3 +7,20 @@ const url = "http://bpbuild.com/devtest/data.php"
       .then(data => {
         console.log(data);
           });
+
+// for (let i = 0; i < array.length; i++) {
+//     let start = 0
+//     start = start += array[i]
+//     console.log(start)
+// }
+
+
+function ArrayAverage() {
+    var sum = array.reduce(function(a, b) {
+        return a + b;
+    }, 0) 
+    Avg = sum/array.length
+    console.log(Avg)
+}
+
+ArrayAverage()
