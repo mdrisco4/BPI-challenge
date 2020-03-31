@@ -18,7 +18,9 @@ function randomize(newArray) {
         newArray[index] = temp;
     }
     console.log(newArray)
-    // document.querySelector(".randomized").innerHTML = 'Randomized: ' newArray
+    // var strArray = newArray.toString();
+    // console.log(strArray)
+    document.querySelector(".randomized").innerHTML = 'Randomized: ' + newArray
 }
 
 randomize(array)
