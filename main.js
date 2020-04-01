@@ -26,6 +26,18 @@ fetch(url)
     document.querySelectorAll(".grid-item")[11].innerHTML = data[1].gender
     document.querySelectorAll(".grid-item")[15].innerHTML = data[2].gender
     document.querySelectorAll(".grid-item")[19].innerHTML = data[3].gender
+    data.forEach(element => {
+      console.log(element.firstname)
+    });
+    data.forEach(element => {
+      console.log(element.lastname)
+    });
+    data.forEach(element => {
+      console.log(element.email)
+    });
+    data.forEach(element => {
+      console.log(element.gender)
+    });
   });
 
 
@@ -74,8 +86,6 @@ function ArrayAverage() {
 }
 ArrayAverage();
 
-
-
 // CODE FOR SMILEY FACE CHALLENGE
 let stmt =
   "Use the shortest possible regular expression or replacement method using php, ruby or javascript to put a smiley face after every word that ends in a vowel in this sentence.";
@@ -92,5 +102,13 @@ for (let i = 0; i < words.length; i++) {
     newWords.push(words[i]);
   }
 }
+newWords.push("&#128512;")
 newSentence = newWords.join(" ");
 document.querySelector(".smileys").innerHTML = newSentence;
+
+
+
+// TRYING A SHORTER APPROACH ON THE BONUS
+// console.log(words)
+// const lastVowel = s => (s.match(/[aeiou]/ig) || "").slice(-1);
+// words.forEach(e => console.log(`"${e}" => "${lastVowel(e)}"`));
