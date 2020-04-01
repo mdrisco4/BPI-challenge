@@ -4,7 +4,7 @@ let array = [22, 14, 3, 4, 37, 6, 7, 81, 9, 10];
 
 
 // URL FOR DATA FETCH AND FETCH ITSELF
-const url = "http://bpbuild.com/devtest/data.php";
+const url = "https://bpbuild.com/devtest/data.php";
 
 fetch(url)
   .then(res => res.json())
