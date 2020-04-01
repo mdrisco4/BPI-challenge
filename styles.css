@@ -20,3 +20,17 @@ button {
 .grid-item {
     border: 1px solid black;
 }
+
+#data {
+    border: 1px solid black;
+}
+
+th {
+    border: 1px solid black;
+}
+
+td {
+    border: 1px solid black;
+}
+
+
