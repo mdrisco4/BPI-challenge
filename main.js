@@ -29,6 +29,7 @@ fetch(url)
     data.forEach(element => {
       console.log(element.firstname)
     });
+    // console.log(fname)
     data.forEach(element => {
       console.log(element.lastname)
     });
@@ -42,39 +43,20 @@ fetch(url)
 
 
   // RANDOMIZE FUNCTION
-function randomize(newArray) {
-  var chgArray = newArray.length,
+function randomize() {
+  var chgArray = array.length,
     temp,
     index;
   while (chgArray > 0) {
     index = Math.floor(Math.random() * chgArray);
     chgArray--;
-    temp = newArray[chgArray];
-    newArray[chgArray] = newArray[index];
-    newArray[index] = temp;
+    temp = array[chgArray];
+    array[chgArray] = array[index];
+    array[index] = temp;
   }
-  document.querySelector(".randomized").innerHTML = "Randomized: " + newArray;
+  document.querySelector(".randomized").innerHTML = "Randomized: " + array;
 }
-randomize(array);
-
-document
-  .querySelector(".randomize")
-  .addEventListener("click", function(newArray) {
-    var chgArray = newArray.length,
-      temp,
-      index;
-    while (chgArray > 0) {
-      index = Math.floor(Math.random() * chgArray);
-      chgArray--;
-      temp = newArray[chgArray];
-      newArray[chgArray] = newArray[index];
-      newArray[index] = temp;
-    }
-    console.log(newArray);
-    document.querySelector(".randomized").innerHTML = "Randomized: " + newArray;
-  });
-
-
+randomize();
 
   // AVERAGE FUNCTION
 function ArrayAverage() {
