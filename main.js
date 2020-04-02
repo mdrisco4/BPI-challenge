@@ -57,7 +57,8 @@ let newWords = [];
 for (let i = 0; i < words.length; i++) {
   if (
     words[i].charAt(words[i].length - 1) === "a" ||
-    words[i].charAt(words[i].length - 1) === "e"
+    words[i].charAt(words[i].length - 1) === "e" ||
+    words[i].charAt(words[i].length - 1) === "o"
   ) {
     wordSmiley = words[i] + "&#128512;";
     newWords.push(wordSmiley);
