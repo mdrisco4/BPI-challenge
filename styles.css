@@ -1,5 +1,18 @@
+a {
+    border: 2px solid black;
+    font-size: 20px;
+    color: white;
+    background-color: blue;
+    padding: 4px;
+    text-decoration: none;
+}
+
 button {
-    border: 1px solid black;
+    border: 2px solid black;
+    font-size: 20px;
+    color: white;
+    background-color: blue;
+    padding: 4px;
 }
 
 #data {
@@ -14,4 +27,8 @@ td {
     border: 1px solid black;
 }
 
+img {
+    width: 600px;
+    height: auto;
+}
 

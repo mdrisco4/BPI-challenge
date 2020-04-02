@@ -1,36 +1,6 @@
 // ARRAY FOR PROBLEMS 1 AND 2
 let array = [22, 14, 3, 4, 37, 6, 7, 81, 9, 10];
 
-// URL FOR DATA FETCH AND FETCH ITSELF
-var dataTbody = document.querySelector("#data tbody");
-
-function addDataToTbody(nl, data) {
-  data.forEach((d, i) => {
-    var tr = nl.insertRow(i);
-    Object.keys(d).forEach((k, j) => {
-      var cell = tr.insertCell(j);
-      cell.innerHTML = d[k];
-    });
-    nl.appendChild(tr);
-  });
-}
-
-const url = "https://bpbuild.com/devtest/data.php";
-
-var jsData;
-
-var myStuff = fetch(url)
-  .then(res => res.json())
-  .then(data => {
-    addDataToTbody(dataTbody, data);
-  });
-
-console.log(dataTbody);
-
-console.log(data);
-
-// console.log(myStuff)
-
 // RANDOMIZE FUNCTION
 function randomize() {
   var chgArray = array.length,
@@ -56,6 +26,28 @@ function ArrayAverage() {
   document.querySelector(".mean").innerHTML = "Mean: " + Avg;
 }
 ArrayAverage();
+
+// URL FOR DATA FETCH, FETCH AND TABLE CREATING FUNCTION
+var dataTbody = document.querySelector("#data tbody");
+
+function addDataToTbody(nl, data) {
+  data.forEach((d, i) => {
+    var tr = nl.insertRow(i);
+    Object.keys(d).forEach((k, j) => {
+      var cell = tr.insertCell(j);
+      cell.innerHTML = d[k];
+    });
+    nl.appendChild(tr);
+  });
+}
+
+const url = "https://bpbuild.com/devtest/data.php";
+
+var myStuff = fetch(url)
+  .then(res => res.json())
+  .then(data => {
+    addDataToTbody(dataTbody, data);
+  });
 
 // CODE FOR SMILEY FACE CHALLENGE
 let stmt =
