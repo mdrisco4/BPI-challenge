@@ -72,16 +72,16 @@ document.querySelector(".smileys").innerHTML = newSentence;
 
 // TRYING A SHORTER APPROACH ON THE BONUS
 
-console.log( /[aeiou]$/.test(stmt) );
+// console.log( /[aeiou]$/.test(stmt) );
 
 
-const lastVowel = s => (s.match(/[aeiou]$/ig) || "").slice(-1);
+const lastVowel = s => (s.match(/[aeiou.]$/ig) || "").slice(-1);
 words.forEach(e => console.log(`"${e}" => "${lastVowel(e)}"`));
 
 const regex = (/[aeiou]$/)
 console.log(stmt.replace(regex, 'the'));
 
 
-console.log(stmt.replace(/[aeiou]$/gi, 'the'));
+console.log(stmt.replace(/[aeiou]/gi, 'the'));
 
-console.log(stmt.replace(/[aeiou]$/ig, 'the'));
+// console.log(stmt.replace(/[aeiou]$/ig, 'the'));
