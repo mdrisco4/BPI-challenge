@@ -72,9 +72,6 @@ document.querySelector(".smileys").innerHTML = newSentence;
 
 // TRYING A SHORTER APPROACH ON THE BONUS
 
-regex = stmt.replace(/[aeiou.]\b/gi, "&#128512;");
-document.querySelector(".smileys-regex").innerHTML = regex;
-
 // const lastVowel = s => (s.match(/[aeiou.]$/ig) || "").slice(-1);
 // words.forEach(e => console.log(`"${e}" => "${lastVowel(e)}"`));
 // console.log(stmt);
